@@ -16,10 +16,10 @@
         id integer auto_increment primary key,
         nombre varchar (30),
         mail varchar (70)
-        )"
+        )";
       $pdo->exec($sql);
 
-      $sql = "insert into contacto (nombre, mail) values ('pepe', pepe@server.com)
+      $sql = "insert into contacto (nombre, mail) values ('pepe', 'pepe@server.com'),
       ('concha', 'concha@email.net')";
       $pdo->exec($sql);
     ?>

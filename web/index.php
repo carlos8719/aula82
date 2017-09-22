@@ -7,6 +7,9 @@
   <body>
     <h1>Contactos</h1>
 
+    <table>
+
+
     <?php
       require_once "../config.php";
       $pdo = new PDO("mysql:host={$host};port={$port}; dbname={$dbname}", $user, $pass);
@@ -16,7 +19,7 @@
 
       /* Con dos foreach si amplias columnas se verian igual,
        sin neccesidad de modificar.*/
-       
+
       foreach ($res as $fila) {
         echo "<tr>";
         foreach ($fila as $value) {
@@ -25,6 +28,7 @@
         echo "</tr>";
       }
     ?>
+  </table>
 
   </body>
 </html>
