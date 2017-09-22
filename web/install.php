@@ -10,9 +10,13 @@
       require_once "../config.php";
 
       // envez de mysql es pgsql
-      $pdo = new PDO("pgsql:host={$host};port={$port}", $user, $pass);
-      $sql = "create database $dbname; use $dbname;";
-      $pdo->exec($sql);
+      $pdo = new PDO("pgsql:host={$host};port={$port}; dbname={$dbname}", $user, $pass);
+
+
+      // da error xk no puede crear la BD porque ya esta esta creada
+      // crear bd
+      // $sql = "create database $dbname; use $dbname;";
+      // $pdo->exec($sql);
 
 
       // cambiamos integer auto_increment por serial
